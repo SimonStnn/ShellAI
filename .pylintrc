@@ -1,0 +1,21 @@
+[MASTER]
+# Add files or directories to the blacklist
+ignore=.git,__pycache__,.venv,.egg-info,build,dist
+
+[MESSAGES CONTROL]
+# Disable the message, report, category or checker with the given id(s)
+disable=broad-exception-caught,import-error,too-few-public-methods
+
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=100
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=10
+# Maximum number of locals for function / method body
+max-locals=20
+
+[BASIC]
+# Good variable names which should always be accepted
+good-names=i,j,k,ex,Run,_,e,f,fd,id,db

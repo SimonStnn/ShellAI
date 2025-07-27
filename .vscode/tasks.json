@@ -1,0 +1,104 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Python: Install Dependencies",
+      "type": "shell",
+      "command": "pip",
+      "args": ["install", "-e", ".[dev,test]"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Install ShellAI with development dependencies"
+    },
+    {
+      "label": "Python: Install Package",
+      "type": "shell",
+      "command": "pip",
+      "args": ["install", "-e", "."],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Install ShellAI package in development mode"
+    },
+    {
+      "label": "Python: Run Tests",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "pytest", "-v"],
+      "group": "test",
+      "problemMatcher": [],
+      "detail": "Run all tests with verbose output"
+    },
+    {
+      "label": "Python: Run Tests with Coverage",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "pytest", "-v", "--cov=shellai", "--cov-report=html"],
+      "group": "test",
+      "problemMatcher": [],
+      "detail": "Run tests with coverage report"
+    },
+    {
+      "label": "Python: Run ShellAI Example",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "shellai.cli", "list files"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Run ShellAI with example command"
+    },
+    {
+      "label": "Python: List Commands",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "shellai.cli", "list"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Show all supported commands"
+    },
+    {
+      "label": "Python: Format Code (Black)",
+      "type": "shell",
+      "command": "black",
+      "args": ["shellai", "tests"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Format Python code with Black"
+    },
+    {
+      "label": "Python: Sort Imports (isort)",
+      "type": "shell",
+      "command": "isort",
+      "args": ["shellai", "tests"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Sort imports with isort"
+    },
+    {
+      "label": "Python: Lint (flake8)",
+      "type": "shell",
+      "command": "flake8",
+      "args": ["shellai", "tests"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Lint Python code with flake8"
+    },
+    {
+      "label": "Python: Type Check (mypy)",
+      "type": "shell",
+      "command": "mypy",
+      "args": ["shellai"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Type check with mypy"
+    },
+    {
+      "label": "Python: Build Distribution",
+      "type": "shell",
+      "command": "python",
+      "args": ["-m", "build"],
+      "group": "build",
+      "problemMatcher": [],
+      "detail": "Build distribution packages"
+    }
+  ]
+}

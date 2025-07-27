@@ -1,0 +1,67 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch ShellAI",
+      "type": "python",
+      "request": "launch",
+      "module": "shellai.cli",
+      "args": ["list files"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch ShellAI - List Commands",
+      "type": "python",
+      "request": "launch",
+      "module": "shellai.cli",
+      "args": ["list"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch ShellAI - Verbose",
+      "type": "python",
+      "request": "launch",
+      "module": "shellai.cli",
+      "args": ["-v", "show current directory"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch ShellAI - Custom Input",
+      "type": "python",
+      "request": "launch",
+      "module": "shellai.cli",
+      "args": ["${input:naturalLanguageInput}"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug Current Test File",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["${file}", "-v"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Debug All Tests",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": ["tests/", "-v"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "naturalLanguageInput",
+      "description": "Enter natural language command",
+      "default": "list files",
+      "type": "promptString"
+    }
+  ]
+}

@@ -3,6 +3,9 @@ click>=8.0.0
 pyyaml>=6.0
 rich>=13.0.0
 typer>=0.9.0
+llama-index>=0.10.0
+llama-index-llms-ollama>=0.1.0
+sentence-transformers>=2.2.0
 
 # Testing
 pytest>=7.0.0
